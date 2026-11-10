@@ -1,0 +1,24 @@
+{
+  "name": "cpf-cnpj-alfanumerico",
+  "version": "1.0.0",
+  "description": "Validate and generate Brazilian CPF and CNPJ numbers, including the new alphanumeric CNPJ (IN RFB 2.229/2024). Zero dependencies.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "files": ["dist", "LICENSE*", "NOTICE"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": ["cpf", "cnpj", "cnpj-alfanumerico", "alphanumeric-cnpj", "brasil", "brazil", "receita-federal", "validator", "generator", "digito-verificador"],
+  "author": "Osama Mumtaz",
+  "license": "MIT",
+  "homepage": "https://github.com/osamamumtaz01/cpf-cnpj-alfanumerico#readme",
+  "repository": { "type": "git", "url": "git+https://github.com/osamamumtaz01/cpf-cnpj-alfanumerico.git" },
+  "bugs": { "url": "https://github.com/osamamumtaz01/cpf-cnpj-alfanumerico/issues" },
+  "engines": { "node": ">=20" },
+  "devDependencies": { "typescript": "^5.6.0" }
+}
